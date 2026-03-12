@@ -19,16 +19,22 @@
 
 <h4 align="center">Image Restoration</h4>
 
-![](assets/teaser1.png)
+<p align="center">
+<img src="assets/teaser1.png" style="width: 90%; height: auto;">
+</p>
+
+
 
 <h4 align="center">Image Editing</h4>
 
-![](assets/teaser2.png)
+<p align="center">
+<img src="assets/teaser2.png" style="width: 90%; height: auto;">
+</p>
 
 <h4 align="center">Camera-controlled Video Generation</h4>
 
-![](assets/case.gif)
 ![](assets/case2.gif)
+![](assets/case.gif)
 
 
 <h3 align="center">Achieve various conditional visual generation guided by a coarse sample with 1 line of code.</h3>

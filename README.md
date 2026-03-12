@@ -2,7 +2,7 @@
 <h2 align="center">Coarse-Guided Visual Generation via Weighted h-Transform Sampling</h2>
 
 
-### Achieve conditional visual generation guided by the coarse sample with 1 line of sampling code.
+### Achieve conditional visual generation guided by the coarse sample with 1 line of code.
 
 
 <!-- ## Abstract
@@ -110,8 +110,8 @@ You can change the hyperparameters $\alpha_1$ and $\alpha_2$ in ''full_run.sh''.
 - [x] Quick start examples
 - [x] Complete datasets release
 - [x] Evaluation code
-- [] Coarse videos construcation code
-- [] Image Editing code
+- [ ] Coarse videos construcation code
+- [ ] Image Editing code
 
 ## Acknowledgments
 

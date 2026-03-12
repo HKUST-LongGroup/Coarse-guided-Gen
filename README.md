@@ -1,8 +1,37 @@
-<h1 align="center">Coarse-guided-Gen</h1>
+<!-- <h1 align="center">Coarse-guided-Gen</h1> -->
 <h2 align="center">Coarse-Guided Visual Generation via Weighted h-Transform Sampling</h2>
+<p align="center">
+  <a href="https://wang-yanghao.github.io/">Yanghao Wang</a><sup>*</sup> ·
+  <a href="https://ziqi-jiang.github.io/">Ziqi Jiang</a><sup>*</sup> ·
+  <a href="https://zhenwang97.github.io/">Zhen Wang</a> ·
+  <a href="https://zjuchenlong.github.io/">Long Chen</a><sup>†</sup>
+</p>
+<p align="center"><sup>*</sup> Equal contribution</p>
+
+<p align="center">
+  <!-- <a href="https://time-to-move.github.io/">
+    <img src="assets/logo_page.svg" alt="Project Page" width="125">
+  </a> -->
+  <a href="https://arxiv.org/abs/2511.08633">
+    <img src="assets/logo_arxiv.svg" alt="Arxiv" width="125">
+  </a>
+</p>
+
+<h4 align="center">Image Restoration</h4>
+
+![](assets/teaser1.png)
+
+<h4 align="center">Image Editing</h4>
+
+![](assets/teaser2.png)
+
+<h4 align="center">Camera-controlled Video Generation</h4>
+
+![](assets/case.gif)
+![](assets/case2.gif)
 
 
-### Achieve conditional visual generation guided by the coarse sample with 1 line of code.
+<h3 align="center">Achieve various conditional visual generation guided by a coarse sample with 1 line of code.</h3>
 
 
 <!-- ## Abstract
@@ -111,7 +140,7 @@ You can change the hyperparameters $\alpha_1$ and $\alpha_2$ in ''full_run.sh''.
 - [x] Complete datasets release
 - [x] Evaluation code
 - [ ] Coarse videos construcation code
-- [ ] Image Editing code
+- [ ] Image editing code
 
 
 <br>

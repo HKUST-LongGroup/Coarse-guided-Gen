@@ -32,9 +32,8 @@
 </p>
 
 <h4 align="center">Camera-controlled Video Generation</h4>
-
-![](assets/case2.gif)
-![](assets/case.gif)
+  <img src="assets/case2.gif" width="900" /><br/>
+  <img src="assets/case1.gif" width="900" /><br/>
 
 
 <h3 align="center">Achieve various conditional visual generation guided by a coarse sample with 1 line of code.</h3>

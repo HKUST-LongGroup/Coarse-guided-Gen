@@ -10,7 +10,7 @@ We propose a novel guided method by using the $h$-transform, a tool that can con
 
 <br>
 
-## Table of Contents
+## 0. Table of Contents
 
 - [Environment preparation](#1-environment-preparation)
 - [Quick start](#2-quick-start)
@@ -48,8 +48,6 @@ bash quick_run.sh
 ```
 The result will be stored in the ''VideoGen/outputs/'' path.
 
-<br>
-
 
 ### Coarse video guided generation
 
@@ -81,8 +79,6 @@ The result will be stored in the ''ImageGen/outputs/'' path.
 
 You can change the hyperparameter $\alpha$ in the 3rd line of ''full_run.sh''.
 
-<br>
-
 
 ### Coarse video guided generation
 ```
@@ -103,6 +99,10 @@ The result will be stored in the ''VideoGen/outputs/'' path.
 
 You can change the hyperparameters $\alpha_1$ and $\alpha_2$ in ''full_run.sh''.
 
+
+<br>
+
+
 ## TODO 🛠️
 
 - [x] Image restoration run code
@@ -113,10 +113,20 @@ You can change the hyperparameters $\alpha_1$ and $\alpha_2$ in ''full_run.sh''.
 - [ ] Coarse videos construcation code
 - [ ] Image Editing code
 
+
+<br>
+
+
+
 ## Acknowledgments
 
 The codebases are built on top of [DPS](https://github.com/DPS2022/diffusion-posterior-sampling) and [TTM](https://github.com/time-to-move/TTM).
 Thanks very much.
+
+
+<br>
+
+
 
 ## BibTex
 ```

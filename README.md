@@ -8,7 +8,7 @@ We propose a novel guided method by using the $h$-transform, a tool that can con
 pip install -r requirements.txt
 ```
 
-## 2.Quick start
+## 2. Quick start
 
 ### Coarse image guided generation
 
@@ -32,7 +32,7 @@ bash quik_run.sh
 ```
 The result will be stored in the ''ImageGen/outputs/'' path.
 
-## 3.Full run
+## 3. Full run (complete datasets and evaluation)
 ### Coarse image guided generation
 ```
 cd ImageGen
@@ -40,8 +40,6 @@ cd ImageGen
 Preprare the complete datasets.
 ```
 wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/ffhq_256.zip
-```
-```
 unzip ./data/ffhq_256.zip
 ```
 Full experiments including the evaluation.
@@ -59,14 +57,8 @@ cd VideoGen
 Preprare the complete datasets.
 ```
 wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/datasets_cog.zip
-```
-```
 unzip ./data/datasets_cog.zip
-```
-```
 wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/datasets_wan.zip
-```
-```
 unzip ./data/datasets_wan.zip
 ```
 Full experiments including the evaluation.

@@ -19,7 +19,7 @@ cd ImageGen
 ```
 Download pretrained checkpoint from the [link](https://drive.google.com/drive/folders/1jElnRoFv7b31fG0v6pTSQkelbSX3xGZh?usp=sharing), download the checkpoint "ffhq_10m.pt" and paste it to ./models/. Then run the code.
 ```
-bash run.sh
+bash quick_run.sh
 ```
 The result will be stored in the ''VideoGen/outputs/'' path.
 
@@ -28,8 +28,51 @@ The result will be stored in the ''VideoGen/outputs/'' path.
 We generate the video for the given example video.
 ```
 cd ImageGen 
-bash run.sh
+bash quik_run.sh
 ```
 The result will be stored in the ''ImageGen/outputs/'' path.
 
-## 3.Fully run
+## 3.Full run
+### Coarse image guided generation
+```
+cd ImageGen
+```
+Preprare the complete datasets.
+```
+wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/ffhq_256.zip
+```
+```
+unzip ./data/ffhq_256.zip
+```
+Full experiments including the evaluation.
+```
+bash full_run.sh
+```
+The result will be stored in the ''ImageGen/outputs/'' path. 
+
+You can change the hyperparameter $\alpha$ in the 3rd line of ''full_run.sh''.
+
+### Coarse video guided generation
+```
+cd VideoGen
+```
+Preprare the complete datasets.
+```
+wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/datasets_cog.zip
+```
+```
+unzip ./data/datasets_cog.zip
+```
+```
+wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/datasets_wan.zip
+```
+```
+unzip ./data/datasets_wan.zip
+```
+Full experiments including the evaluation.
+```
+bash full_run.sh
+```
+The result will be stored in the ''VideoGen/outputs/'' path. 
+
+You can change the hyperparameters $\alpha_1$ and $\alpha_2$ in ''full_run.sh''.

@@ -16,14 +16,14 @@ DTYPE = torch.bfloat16
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Run Wan Image to Video Pipeline")
-    parser.add_argument("--input_dir", type=str, default="datasets_cog/", help="Path to input images")
+    parser.add_argument("--input_dir", type=str, default="data/example_cog/", help="Path to input images")
     parser.add_argument("--output_dir", type=str, default="outputs/cog/", help="Path to save output video")
     parser.add_argument("--seed", type=int, default=0, help="Random seed")
     parser.add_argument("--num-inference-steps", type=int, default=50, help="Number of inference steps")
     parser.add_argument("--num-frames", type=int, default=49, help="Number of frames to generate")
     parser.add_argument("--guidance-scale", type=float, default=6.0, help="Guidance scale for generation")
-    parser.add_argument("--w1", type=int, default=4, help="Generated Samples with baseline")
-    parser.add_argument("--w2", type=int, default=8, help="Generated Samples with baseline")
+    parser.add_argument("--alpha_1", type=int, default=4, help="Generated Samples with baseline")
+    parser.add_argument("--alpha_2", type=int, default=8, help="Generated Samples with baseline")
     return parser.parse_args()
 
 
@@ -32,7 +32,7 @@ args = parse_args()
 
 input_dir = args.input_dir
 
-output_dir = args.output_dir + str(args.w1) + "_" + str(args.w2)+"/"
+output_dir = args.output_dir + str(args.alpha_1) + "_" + str(args.alpha_2)+"/"
 
 num_inference_steps = args.num_inference_steps
 seed = args.seed
@@ -91,8 +91,8 @@ def each_split(split_ls, device):
                         motion_signal_mask_path=motion_signal_mask_path,
                         num_frames=num_frames,
                         guidance_scale=guidance_scale,
-                        w1=args.w1,
-                        w2=args.w2,
+                        alpha_1=args.alpha_1,
+                        alpha_2=args.alpha_2,
                         )
 
         frames = result.frames[0]

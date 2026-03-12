@@ -23,7 +23,7 @@ DTYPE = torch.bfloat16
 # -----------------------
 def parse_args():
     parser = argparse.ArgumentParser(description="Run Wan Image to Video Pipeline")
-    parser.add_argument("--input_dir", type=str, default="datasets_wan/", help="Path to input images")
+    parser.add_argument("--input_dir", type=str, default="data/example_wan/", help="Path to input images")
     parser.add_argument("--output_dir", type=str, default="outputs/wan/", help="Path to save output video")
     parser.add_argument("--negative-prompt", type=str, default=(
         "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，"
@@ -36,15 +36,15 @@ def parse_args():
     parser.add_argument("--max_area", type=int, default=832*480, help="Maximum area for resizing")
     parser.add_argument("--num-frames", type=int, default=81, help="Number of frames to generate")
     parser.add_argument("--guidance-scale", type=float, default=3.5, help="Guidance scale for generation")
-    parser.add_argument("--w1", type=int, default=16, help="Generated Samples with baseline")
-    parser.add_argument("--w2", type=int, default=20, help="Generated Samples with baseline")
+    parser.add_argument("--alpha_1", type=int, default=16, help="Generated Samples with baseline")
+    parser.add_argument("--alpha_2", type=int, default=20, help="Generated Samples with baseline")
     return parser.parse_args()
 
 
 args = parse_args()
 
 input_dir = args.input_dir
-output_dir = args.output_dir + str(args.w1) + "_" + str(args.w2)+"/"
+output_dir = args.output_dir + str(args.alpha_1) + "_" + str(args.alpha_2)+"/"
 negative_prompt = args.negative_prompt
 num_inference_steps = args.num_inference_steps
 seed = args.seed
@@ -105,8 +105,8 @@ def each_split(split_ls, device):
                 generator=generator,
                 motion_signal_video_path=motion_signal_video_path,
                 motion_signal_mask_path=motion_signal_mask_path,
-                w1=args.w1,
-                w2=args.w2,
+                alpha_1=args.alpha_1,
+                alpha_2=args.alpha_2,
             )
 
         frames = result.frames[0]

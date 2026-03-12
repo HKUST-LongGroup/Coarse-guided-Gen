@@ -1,7 +1,7 @@
 set -e
 
 ALPHA=5
-TASKS=("super_resolution")
+TASKS=("motion_blur" "gaussian_blur" "super_resolution" "inpainting_random")
 
 
 # ── Parse arguments ───────────────────────────────────────────────
@@ -48,6 +48,7 @@ declare -A TASK_CONFIGS=(
     [inpainting_random]="configs/inpainting_random_config.yaml"
 )
 
+
 # ── Run sampling for each task ────────────────────────────────────
 for TASK in "${TASKS[@]}"; do
 
@@ -64,7 +65,33 @@ for TASK in "${TASKS[@]}"; do
 
 
 
+    echo ""
+    echo ">>> Starting evaluation..."
+    echo "=================================================" >> "$LOG_FILE"
+    echo "EVALUATION RESULTS" >> "$LOG_FILE"
+    echo "=================================================" >> "$LOG_FILE"
+
+    REF_DIR="${SAVE_DIR}/${TASK}/label/"
+    GEN_DIR="${SAVE_DIR}/${TASK}/recon/"
+
+    if [[ ! -d "$GEN_DIR" ]]; then
+        echo "    [WARN] $GEN_DIR not found, skipping $TASK"
+        continue
+    fi
+
+    echo ""
+    echo ">>> [$(date +"%H:%M:%S")] Evaluating: $TASK"
+    echo "" >> "$LOG_FILE"
+    echo "--- $TASK ---" >> "$LOG_FILE"
+
+    OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0 python3 evaluate.py \
+        --ref_dir "$REF_DIR" \
+        --gen_dir "$GEN_DIR" \
+        --device cuda \
+        --batch_size 32 \
+        2>&1 | tee -a "$LOG_FILE"
 done
+
 
 echo ""
 echo "=================================================="

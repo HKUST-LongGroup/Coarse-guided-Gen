@@ -9,10 +9,7 @@
 <p align="center"><sup>*</sup> Equal contribution</p>
 
 <p align="center">
-  <!-- <a href="https://time-to-move.github.io/">
-    <img src="assets/logo_page.svg" alt="Project Page" width="125">
-  </a> -->
-  <a href="https://arxiv.org/abs/2511.08633">
+  <a href="https://arxiv.org/pdf/2603.12057">
     <img src="assets/logo_arxiv.svg" alt="Arxiv" width="125">
   </a>
 </p>

@@ -161,4 +161,10 @@ Thanks very much.
 
 ## BibTex
 ```
+@article{wang2026coarse,
+  title={Coarse-Guided Visual Generation via Weighted h-Transform Sampling},
+  author={Wang, Yanghao and Jiang, Ziqi and Wang, Zhen and Chen, Long},
+  journal={arXiv preprint arXiv:2603.12057},
+  year={2026}
+}
 ```

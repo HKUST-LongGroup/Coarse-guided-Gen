@@ -1,12 +1,10 @@
 diffusers==0.37.0
 ftfy==6.3.1
 matplotlib==3.7.0
-numpy==1.23.5
+numpy==2.2.6
 opencv_python==4.10.0.84
 packaging==26.0
-Pillow==9.4.0
 Pillow==12.1.1
-PyYAML==6.0
 PyYAML==6.0.3
 scipy==1.17.1
 torch==2.6.0

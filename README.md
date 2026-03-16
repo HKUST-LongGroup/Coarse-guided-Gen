@@ -72,9 +72,7 @@ We take the image super-resolution task and generate the images for the given ei
 
 ```
 cd ImageGen
-```
-Download pretrained checkpoint from the [link](https://drive.google.com/drive/folders/1jElnRoFv7b31fG0v6pTSQkelbSX3xGZh?usp=sharing), download the checkpoint "ffhq_10m.pt" and paste it to ./models/. Then run the code.
-```
+wget -P ./models/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/ffhq_10m.pt
 bash quick_run.sh
 ```
 The result will be stored in the ''VideoGen/outputs/'' path.

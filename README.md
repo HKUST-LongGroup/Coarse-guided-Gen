@@ -95,10 +95,10 @@ The result will be stored in the ''VideoGen/outputs/'' path.
 ```
 cd ImageGen
 ```
-Preprare the complete datasets.
+Prepare the complete datasets.
 ```
 wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/ffhq_256.zip
-unzip ./data/ffhq_256.zip
+unzip -j ./data/ffhq_256.zip -d ./data/ffhq_256
 ```
 Full experiments including the evaluation.
 ```
@@ -113,12 +113,12 @@ You can change the hyperparameter $\alpha$ in the 3rd line of ''full_run.sh''.
 ```
 cd VideoGen
 ```
-Preprare the complete datasets.
+Prepare the complete datasets.
 ```
 wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/datasets_cog.zip
-unzip ./data/datasets_cog.zip
+unzip -j ./data/datasets_cog.zip -d ./data/datasets_cog
 wget -P ./data/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/datasets_wan.zip
-unzip ./data/datasets_wan.zip
+unzip -j ./data/datasets_wan.zip -d ./data/datasets_wan
 ```
 Full experiments including the evaluation.
 ```
@@ -139,7 +139,7 @@ You can change the hyperparameters $\alpha_1$ and $\alpha_2$ in ''full_run.sh''.
 - [x] Quick start examples
 - [x] Complete datasets release
 - [x] Evaluation code
-- [ ] Coarse videos construcation code
+- [ ] Coarse videos construction code
 - [ ] Image editing code
 
 

@@ -85,7 +85,7 @@ We generate the video for the given example video.
 cd VideoGen
 bash quik_run.sh
 ```
-The result will be stored in the ''ImageVideoGen/outputs/'' path.
+The result will be stored in the ''VideoGen/outputs/'' path.
 
 <br>
 

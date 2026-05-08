@@ -75,7 +75,7 @@ cd ImageGen
 wget -P ./models/ https://github.com/HKUST-LongGroup/Coarse-guided-Gen/releases/download/datasets/ffhq_10m.pt
 bash quick_run.sh
 ```
-The result will be stored in the ''VideoGen/outputs/'' path.
+The result will be stored in the ''ImageGen/outputs/'' path.
 
 
 ### Coarse video guided generation
@@ -85,7 +85,7 @@ We generate the video for the given example video.
 cd VideoGen
 bash quik_run.sh
 ```
-The result will be stored in the ''ImageGen/outputs/'' path.
+The result will be stored in the ''ImageVideoGen/outputs/'' path.
 
 <br>
 

@@ -1,5 +1,5 @@
 <!-- <h1 align="center">Coarse-guided-Gen</h1> -->
-<h2 align="center">Coarse-Guided Visual Generation via Weighted h-Transform Sampling</h2>
+<h2 align="center">Adaptive Weighted h-Transform Sampling for Coarse-Guided Visual Generation</h2>
 <p align="center">
   <a href="https://wang-yanghao.github.io/">Yanghao Wang</a><sup>*</sup> ·
   <a href="https://ziqi-jiang.github.io/">Ziqi Jiang</a><sup>*</sup> ·

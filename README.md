@@ -9,7 +9,7 @@
 <p align="center"><sup>*</sup> Equal contribution</p>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2603.12057">
+  <a href="https://arxiv.org/pdf/2606.12057">
     <img src="assets/logo_arxiv.svg" alt="Arxiv" width="125">
   </a>
 </p>
